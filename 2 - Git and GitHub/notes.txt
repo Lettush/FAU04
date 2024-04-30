@@ -1,0 +1,17 @@
+Configuring Name for Commits
+git config --global user.name "Your Name"
+
+Configuring Email for Commits
+git config --global user.email "youremail@email.com"
+
+Initializing a Git Repository
+git init
+
+Adding files into the staging area
+git add .
+
+Shows the status of our files.
+git status
+
+Create a commit
+git commit -m "This is the description."
