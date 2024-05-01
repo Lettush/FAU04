@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element Selector */
+        span {
+            background-color: green;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Class Selector */
+        .class-name {
+            color: red;
+            background-color: pink;
+        }
+
+        /* ID selector */
+        #id-name {
+            font-weight: bold;
+        }
+
+        #check1 {
+            width: 20px;
+            height: 20px;
+        }
+
+        #check2 {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Grouping Selector */
+        h1, h2, .parag {
+            color: orange;
+        }
+
+        /* Descendant Selector */
+        .ancestor p {
+            font-style: italic;
+            color: green;
+        }
+
+        /* Pseudo-classes */
+        .link:visited {
+            color: black;
+        }
+
+        .link:hover {
+            color: red;
+        }
+
+        .link:active {
+            color: aliceblue;
+        }
+
+        /* Pseudo-elements */
+        .pseudo-element::before, .pseudo-element::after {
+            content: "\"";
+            color: #4a9bf0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Element Selector -->
+    <span>This is styled using an element selector.</span>
+    <span>This is styled using an element selector.</span>
+
+    <!-- Class Selector -->
+    <p class="class-name">This is styled using a class selector.</p>
+    <p class="class-name">This is another paragraph.</p>
+    <h3 class="class-name">This is a heading.</h3>
+
+    <!-- ID Selector -->
+    <p id="id-name">This is styled using an ID selector.</p>
+
+    <!-- <input type="checkbox" name="check1" id="check1">
+    <label for="check1">Check 1</label>
+    <input type="checkbox" name="check2" id="check2">
+    <label for="check2">Check 2</label> -->
+
+    <!-- Universal Selector -->
+    <div>This is styled only by the universal selector.</div>
+    <p>This is also styled only by the universal selector.</p>
+
+    <br>
+
+    <!-- Grouping Selector -->
+    <h1>Welcome to My Website</h1>
+    <p class="parag">This is a paragraph of text.</p>
+    <h2>About Me</h2>
+    <p class="parag">This is another paragraph of text.</p>
+
+    <!-- Descendant Selector -->
+    <div class="ancestor">
+        <p>This is styled using a descendant selector.</p>
+        <h3>This is another element.</h3>
+    </div>
+
+    <!-- Pseudo-classes -->
+    <a href="#" class="link">This is styled using a pseudo-class.</a>
+
+    <!-- Pseudo-elements -->
+    <p class="pseudo-element">This is styled using a pseudo-element.</p>
+</body>
+</html>
