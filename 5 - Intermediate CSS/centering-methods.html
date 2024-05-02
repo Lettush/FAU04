@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block {
+            display: block;
+            background-color: tomato;
+            width: 200px;
+            height: 300px;
+        }
+
+        .inline {
+            display: inline;
+            background-color: aqua;
+            width: 300px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background-color: greenyellow;
+            /* width: 400px;
+            height: 400px; */
+        }
+
+        .flex-container {
+            height: 200px;
+            background-color: lightgrey;
+            margin-bottom: 20px;
+
+            /* flex properties */
+            display: flex;
+            flex-direction: row; /* Default is row, column will change the main and cross axis */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-container {
+            height: 200px;
+            background-color: lightgrey;
+            margin-bottom: 20px;
+
+            /* grid properties */
+            display: grid;
+            place-items: center;
+        }
+
+        .centered-div {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Displays -->
+    <div class="block">This is a block element.</div>
+    <span class="inline">This is an inline element.</span>
+    <div class="inline-block">This is an inline-block element.</div>
+
+    <br><br>
+
+    <!-- Centering -->
+    <div class="flex-container">
+        <div class="centered-div">
+            Flex Container
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="centered-div">
+            Grid Container
+        </div>
+    </div>
+</body>
+</html>

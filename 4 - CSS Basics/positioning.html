@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Ancestor Element */
+        .ancestor {
+            position: relative; /* IMPORTANT */
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* Relative Positioning */
+        .relative {
+            position: relative; /* can move based on its original position */
+
+            /* positioning properties */
+            /* top, right, bottom, left */
+            top: 0px;
+            left: 200px;
+            /* right: 200px; */
+        }
+
+        /* Absolute Positioning */
+        .absolute {
+            position: absolute; /* moves based on its parent */
+
+            top: 0;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+        }
+
+        /* Fixed Positioning */
+        .fixed {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        /* Sticky Positioning */
+        .sticky {
+            position: sticky;
+            position: -webkit-sticky; /* Safari */
+            /* top: 0px (static -> fixed) */
+            bottom: 0px; /* (fixed -> static) */
+        }
+    </style>
+</head>
+<body>
+    <div class="ancestor">
+        <div>This is the first line.</div>
+        <div>This is the second line.</div>
+        <div class="relative">Relative Positioning</div>
+        <div class="absolute">Absolute Positioning</div>
+        <div class="fixed">Fixed Positioning</div>
+    </div>
+
+    <div style="height: 2000px;">Scroll down to see the sticky element in action.</div>
+    <div class="sticky">Sticky Positioning</div>
+    <div style="height: 2000px;">Scroll down to see the sticky element in action.</div>
+</body>
+</html>
