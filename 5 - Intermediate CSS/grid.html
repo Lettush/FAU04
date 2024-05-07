@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Styling */
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            background-color: #e3d9c1;
+        }
+
+        .gridContainer {
+            padding: 20px;
+        }
+
+        .gridItem {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gridItem:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Grid */
+
+        /* Using px */
+        .gridContainer {
+            display: grid;
+            /* grid-template-columns: 200px 200px; */
+            /* grid-template-rows: 200px 120px 300px; */
+        }
+
+        /* Using auto */
+        .gridContainer {
+            grid-template-columns: auto auto auto;
+        }
+
+        /* Using percentage */
+        .gridContainer {
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            /* grid-template-rows: 100% 100% ; */
+        }
+
+        /* Using Fr */
+        .gridContainer {
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 400px 200px;
+        }
+
+        /* Using repeat() */
+        .gridContainer {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 300px 100px);
+        }
+
+        /* Gap */
+        .gridContainer {
+            /* grid-column-gap: 20px;
+            grid-row-gap: 10px; */
+            gap: 7px;
+        }
+
+        /* Grid Area */
+        .gridItem2 {
+            /*  'grid-row-start', 'grid-column-start', 'grid-row-end', and 'grid-column-end'. */
+            grid-area: 3 / 1 / 5 / 4;
+        }
+
+        /* Remove Grid Area */
+        .gridItem2 {
+            grid-area: auto;
+        }
+
+        /* MEDIA QUERIES */
+        /* 
+            @media media-type (media-feature/condition) {
+                * insert css codeblocks in here *
+            }
+
+            Mobile Devices: Less than 481px
+            iPads, Tablets: 481px - 768px
+            Small Screens, Laptops: 769px - 1024px
+            Desktops, Large Screens: 1025px - 1200px
+            Extra Large Screens, TV: 1201px and greater
+        */
+
+        /* Media Query for Large Screens */
+        @media screen and (min-width: 1025px) {
+            .gridContainer {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto auto;
+            }
+        }
+
+        /* Media Query for Small Screens */
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+            .gridContainer {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Media Query for Mobile Devices */
+        @media screen and (max-width: 480px) {
+            .gridContainer {
+                grid-template-columns: 1fr;
+            }
+            
+            .gridItem7, .gridItem8, .gridItem9 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gridContainer">
+        <div class="gridItem gridItem1">Services</div>
+        <div class="gridItem gridItem2">About Us</div>
+        <div class="gridItem gridItem3">Contact Us</div>
+        <div class="gridItem gridItem4">Mission</div>
+        <div class="gridItem gridItem5">Vision</div>
+        <div class="gridItem gridItem6">Featured Product</div>
+        <div class="gridItem gridItem7">Product 1</div>
+        <div class="gridItem gridItem8">Product 2</div>
+        <div class="gridItem gridItem9">Product 3</div>
+    </div>
+</body>
+</html>
